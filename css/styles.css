@@ -632,6 +632,10 @@ label {
     border var(--default-transition-properties),
     fill var(--default-transition-properties);
 }
+.user-privacy-checkbox {
+  width: 20px;
+  height: 20px;
+}
 .user-privacy-checkbox:checked + .user-policy-label .our-checkbox {
   background-color: var(--accent-color);
   border: none;
