@@ -18,6 +18,8 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Script to open the Modal Window -->
+    <script src="./js/modal.js" defer></script>
     <title>Web Studio</title>
   </head>
 
@@ -448,8 +450,8 @@
     <!-- /Page Footer -->
 
     <!-- Modal Window -->
-    <div class="data-modal is-hidden" data-modal>
-      <div class="data-modal-window">
+    <div class="back-drop is-hidden" data-modal>
+      <div class="modal-window">
         <button type="button" class="data-modal-close-but" data-modal-close>
           <svg class="close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
@@ -469,7 +471,10 @@
                 name="user-name"
                 id="user-name"
                 required
+                placeholder=""
+                maxlength="30"
               />
+              <span class="our-placeholder">Grisha Eger</span>
               <svg class="form-icon" height="24" width="18">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
@@ -478,7 +483,16 @@
           <label class="form-label"
             ><span class="label-text">Phone</span>
             <div class="input-and-svg-container">
-              <input class="form-input" type="tel" name="user-phone" required />
+              <input
+                class="form-input"
+                type="tel"
+                name="user-phone"
+                required
+                placeholder=""
+                pattern="[0-9]{10}"
+                title="Only numbers in format xxxxxxxxxx"
+              />
+              <span class="our-placeholder">1111111111</span>
               <svg class="form-icon" height="24" width="18">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
@@ -492,7 +506,9 @@
                 type="email"
                 name="user-email"
                 required
+                placeholder=""
               />
+              <span class="our-placeholder">example@email.com</span>
               <svg class="form-icon" height="24" width="18">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
@@ -533,7 +549,5 @@
       </div>
     </div>
     <!-- /Modal Window -->
-
-    <script src="./js/modal.js"></script>
   </body>
 </html>
