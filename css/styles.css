@@ -474,6 +474,7 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 16px;
   color: var(--primary-bg-color);
   background-color: var(--iris-color);
   border-radius: 4px;
@@ -483,9 +484,6 @@ label {
   letter-spacing: 0.04em;
   fill: var(--primary-bg-color);
   transition: background-color var(--default-transition-properties);
-}
-.subscribe-svg {
-  margin-left: 16px;
 }
 
 /* /Page Footer */
@@ -553,16 +551,17 @@ label {
   font-weight: 500;
   margin-bottom: 16px;
 }
-.label-and-input-wrapper {
-  margin-bottom: 8px;
-}
 .form-label {
-  color: var(--light-slate);
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
+  color: var(--light-slate);
   font-size: 12px;
   line-height: 1.17; /* 116.667% */
   letter-spacing: 0.04em;
+}
+.label-text {
+  display: block;
+  margin-bottom: 4px;
 }
 .input-and-svg-container {
   position: relative;
@@ -592,7 +591,7 @@ label {
 .form-input:focus + .form-icon {
   fill: var(--iris-color);
 }
-.form-comment-textarea-container {
+.text-area-label {
   margin-bottom: 16px;
 }
 .form-comment-textarea {
@@ -616,7 +615,7 @@ label {
 .form-comment-textarea:focus {
   border-color: var(--iris-color);
 }
-.user-privacy-container {
+.user-policy-label {
   margin-bottom: 24px;
 }
 .our-checkbox {
