@@ -23,12 +23,6 @@ body {
   background-color: var(--primary-bg-color);
 }
 
-.container {
-  max-width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
 h1,
 h2,
 h3,
@@ -57,6 +51,17 @@ button {
   list-style: none;
 }
 
+label {
+  user-select: none;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  overflow: hidden;
+}
+
 .cloud-span {
   color: var(--secondary-bg-color);
 }
@@ -81,10 +86,6 @@ button {
   color: #2e2f42;
   line-height: 1.5;
   letter-spacing: 0.02em;
-}
-
-label {
-  user-select: none;
 }
 
 /* /Common Styles */
@@ -117,10 +118,9 @@ label {
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--iris-color);
-  margin-right: 76px;
 }
 .menu {
-  display: inline-flex;
+  display: none;
   gap: 40px;
 }
 .menu-link {
@@ -159,6 +159,7 @@ label {
 /* Address */
 
 .address {
+  display: none;
   font-style: normal;
 }
 .address-list {
@@ -177,6 +178,109 @@ label {
 
 /* /Address */
 
+/* Mobile Menu */
+
+.open-mobile-menu-but {
+  display: block;
+  width: 32px;
+  height: 70px;
+  padding: 24px 0;
+  background-color: transparent;
+  border: none;
+  stroke: black;
+}
+.open-mobile-menu-svg {
+  width: 100%;
+  height: 100%;
+}
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 80px 40px 40px 40px;
+  transition: opacity var(--default-transition-properties),
+    visibility var(--default-transition-properties);
+}
+.mobile-menu.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.close-mobile-menu-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  background-color: transparent;
+}
+.mobile-nav {
+  margin-bottom: auto;
+}
+.mobile-nav-item:not(:last-child) {
+  margin-bottom: 25px;
+}
+.mobile-nav-link {
+  display: block;
+  color: var(--title-text-color);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+.mobile-nav-link.current {
+  color: var(--accent-color);
+}
+.mobile-address {
+  margin-bottom: 20px;
+}
+.mobile-address-tel-item {
+  margin-bottom: 30px;
+}
+.mobile-address-link {
+  display: block;
+  font-style: normal;
+}
+.mobile-address-tel-link {
+  color: var(--iris-color);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+.mobile-address-email-link {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.mobile-socials-list {
+  display: flex;
+  justify-content: space-between;
+}
+.mobile-socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: var(--iris-color);
+  border-radius: 50%;
+  fill: var(--secondary-bg-color);
+}
+
+/* /Mobile Menu */
+
 /* /Page Header */
 
 /* Main */
@@ -194,15 +298,19 @@ label {
 
 .list-item-title {
   color: var(--title-text-color);
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 28px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+
+  text-align: center;
+  font-weight: 500;
 }
 
 .list-item-p {
   color: var(--primary-text-color);
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .but {
@@ -221,10 +329,10 @@ label {
 /* Hero Section */
 
 .hero-section {
-  max-width: 1440px;
   margin: 0 auto;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  max-width: 1440px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: var(--title-text-color);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -244,7 +352,7 @@ label {
 .hero-title {
   max-width: 496px;
   color: var(--primary-bg-color);
-  font-size: 56px;
+  font-size: 26px;
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 0.02em;
@@ -266,20 +374,21 @@ label {
 /* Our Approach Section */
 
 .our-approach-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .our-approach-list {
-  flex-basis: calc((100% - 72px) / 4);
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 50px;
 }
-.our-approach-item {
-  flex-basis: 264px;
+.our-approach-title {
+  font-weight: 700;
 }
 .our-approach-svg-container {
+  display: none;
+
   height: 112px;
-  display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--secondary-bg-color);
@@ -292,6 +401,8 @@ label {
 /* What We Do Section */
 
 .what-we-do {
+  display: none;
+
   padding-bottom: 120px;
 }
 .what-we-do-cont {
@@ -313,8 +424,8 @@ label {
 
 .our-team {
   background-color: var(--secondary-bg-color);
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .our-team-cont {
   display: flex;
@@ -322,7 +433,9 @@ label {
 }
 .our-team-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 .our-team-item {
   background-color: var(--primary-bg-color);
@@ -372,15 +485,16 @@ label {
 /* Our Customers Section */
 
 .our-customers {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 .customers-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px 16px;
 }
 .customers-item {
   height: 88px;
-  flex-basis: calc((100% - 120px) / 6);
+  flex-basis: calc((100% - 16px) / 2);
 }
 .customers-link {
   display: flex;
@@ -416,14 +530,14 @@ label {
 }
 .page-footer-container {
   display: flex;
-  align-items: baseline;
-}
-.footer-logo-p-container {
-  margin-right: 120px;
+  flex-direction: column;
+  gap: 72px;
+  align-items: center;
 }
 .footer-logo {
-  display: inline-block;
-  margin-bottom: 16px;
+  display: block;
+  text-align: center;
+  margin: 0 auto 16px auto;
 }
 .footer-logo-p {
   color: var(--secondary-bg-color);
@@ -436,10 +550,8 @@ label {
 .footer-ellipse-link:focus {
   background-color: var(--green-color);
 }
-.social-links-container {
-  margin-right: 80px;
-}
 .subscribe-and-socials-title {
+  text-align: center;
   font-size: 16px;
   font-weight: 500;
   color: var(--primary-bg-color);
@@ -447,7 +559,9 @@ label {
 }
 .subscribe-form {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 .footer-email-input {
   width: 264px;
@@ -471,6 +585,7 @@ label {
 }
 .footer-subscribe-but {
   min-width: 165px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -772,3 +887,107 @@ label {
 /* /Our Services Section */
 
 /* /Portfolio */
+
+@media screen and (min-width: 768px) {
+  .open-mobile-menu-but {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .menu {
+    display: inline-flex;
+    gap: 40px;
+  }
+  .logo {
+    margin-right: 76px;
+  }
+  .address {
+    display: block;
+  }
+  .list-item-title {
+    font-size: 20px;
+    text-align: left;
+    font-weight: 500;
+  }
+  .list-item-p {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .hero-section {
+    max-width: 1440px;
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+  .hero-title {
+    max-width: 496px;
+    font-size: 56px;
+    letter-spacing: 0.02em;
+  }
+  .our-approach-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .our-approach-list {
+    flex-basis: calc((100% - 72px) / 4);
+    flex-direction: row;
+    gap: 24px;
+  }
+  .our-approach-svg-container {
+    display: flex;
+  }
+  .our-approach-item {
+    flex-basis: 264px;
+  }
+  .what-we-do {
+    display: block;
+  }
+  .our-team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .our-team-list {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .our-team-item-title {
+    text-align: center;
+  }
+  .our-customers {
+    padding: 120px 0;
+  }
+  .customers-list {
+    gap: 24px;
+  }
+  .customers-item {
+    flex-basis: calc((100% - 120px) / 6);
+  }
+  .page-footer-container {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0;
+  }
+  .footer-logo {
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+  .footer-logo-p-container {
+    margin-right: 120px;
+  }
+  .social-links-container {
+    margin-right: 80px;
+  }
+  .subscribe-and-socials-title {
+    text-align: left;
+  }
+  .subscribe-form {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+}
