@@ -101,10 +101,7 @@ label {
 }
 
 /* Navigation */
-.page-nav {
-  display: flex;
-  align-items: center;
-}
+
 .logo {
   font-family: var(--secondary-text-font);
   text-transform: uppercase;
@@ -113,31 +110,8 @@ label {
   letter-spacing: 0.03em;
   color: var(--iris-color);
 }
-.menu {
-  display: none;
-  gap: 40px;
-}
+
 /* /Navigation */
-
-/* Address */
-.address {
-  display: none;
-}
-.address-list {
-  display: flex;
-  gap: 40px;
-}
-.address-link {
-  display: block;
-  padding: 24px 0;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-  transition: color var(--default-transition-properties);
-}
-/* /Address */
-
 /* /Page Header */
 
 /* Main */
@@ -817,6 +791,23 @@ label {
   }
   /* /Mobile Menu */
 
+  /* Page header */
+
+  /* Navigation */
+  .nav-list {
+    display: none;
+  }
+  /* /Navigation */
+
+  /* address */
+  .address {
+    display: none;
+  }
+  /* /address */
+
+  /* /Page header */
+
+  /* our approach section */
   .our-approach-section {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -829,6 +820,9 @@ label {
     flex-direction: column;
     gap: 50px;
   }
+  /* /our approach section */
+
+  /* our team section */
   .our-team-section {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -838,9 +832,15 @@ label {
     align-items: center;
     gap: 72px;
   }
+  /* /our team section */
+
+  /* our customers section */
   .our-customers-section {
     padding: 80px 0;
   }
+  /* /our customers section */
+
+  /* page footer */
   .footer-logo {
     display: block;
     text-align: center;
@@ -865,19 +865,30 @@ label {
   .footer-email-input {
     width: 100%;
   }
+  /* /page footer */
 }
 /* /Phone */
 
-/* Tablet */
+/* Tablet And Bigger */
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
   }
-  .menu {
+
+  /* Navigation */
+  .page-nav {
+    display: flex;
+    align-items: center;
+  }
+  .nav-list {
+    display: none;
+    gap: 40px;
+  }
+  .nav-list {
     display: inline-flex;
     gap: 40px;
   }
-  .menu-link {
+  .nav-link {
     position: relative;
     display: block;
     font-size: 16px;
@@ -888,10 +899,10 @@ label {
     color: var(--title-text-color);
     transition: color var(--default-transition-properties);
   }
-  .menu-link.current {
+  .nav-link.current {
     color: var(--accent-color);
   }
-  .menu-link.current::after {
+  .nav-link.current::after {
     position: absolute;
     left: 0;
     bottom: -1px;
@@ -901,27 +912,51 @@ label {
     width: 100%;
     background-color: var(--accent-color);
   }
-  .menu-link:hover,
-  .menu-link:focus,
+  .nav-link:hover,
+  .nav-link:focus,
   .address-link:hover,
   .address-link:focus {
     color: var(--accent-color);
   }
+  /* /Navigation */
+
+  /* address */
   .address {
     display: block;
     font-style: normal;
   }
+  .address-list {
+    display: flex;
+    gap: 40px;
+  }
+  .address-link {
+    display: block;
+    padding: 24px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    transition: color var(--default-transition-properties);
+  }
+  /* /address */
+
+  /* Mobile Menu */
   .open-mobile-menu-but {
     display: none;
   }
   .mobile-menu-container {
     display: none;
   }
+  /* /Mobile Menu */
+
+  /* Modal Window */
   .modal-window {
     width: 408px;
     min-height: 584px;
     padding: 72px 24px 24px;
   }
+  /* /Modal Window */
+
   .hero-title {
     max-width: 496px;
     font-size: 56px;
@@ -930,6 +965,11 @@ label {
     text-align: left;
     font-weight: 500;
   }
+  .list-item-p {
+    font-size: 16px;
+  }
+
+  /* Page Footer */
   .subscribe-form {
     flex-direction: row;
     gap: 24px;
@@ -937,14 +977,19 @@ label {
   .footer-email-input {
     width: 264px;
   }
+  /* /Page Footer */
 }
 /* /Tablet */
 
 /* Tablet-Desctop */
 @media screen and (min-width: 768px) and (max-width: 1157px) {
+  /* Navigation */
   .page-nav {
     gap: 120px;
   }
+  /* /Navigation */
+
+  /* Address */
   .address-list {
     flex-direction: column;
     gap: 4px;
@@ -952,6 +997,9 @@ label {
   .address-link {
     padding: 0;
   }
+  /* Address */
+
+  /* Our Approach Section */
   .our-approach-section {
     padding-top: 96px;
     padding-bottom: 96px;
@@ -964,6 +1012,9 @@ label {
   .our-approach-item {
     flex-basis: calc((100% - 48px) / 2);
   }
+  /* /Our Approach Section */
+
+  /* Our Team Section */
   .our-team-section {
     padding-top: 96px;
     padding-bottom: 96px;
@@ -974,6 +1025,9 @@ label {
     flex-wrap: wrap;
     gap: 64px 24px;
   }
+  /* /Our Team Section */
+
+  /* Our Customers Section */
   .customers-list {
     flex-wrap: wrap;
     justify-content: center;
@@ -985,12 +1039,16 @@ label {
   .our-customers-section {
     padding: 96px 0;
   }
+  /* Our Customers Section */
+
+  /* Page Footer */
   .page-footer-container {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 72px 24px;
     align-items: baseline;
   }
+  /* /Page Footer */
 }
 /* /Tablet-Desctop */
 
@@ -999,13 +1057,13 @@ label {
   .container {
     max-width: 1158px;
   }
+
+  /* Navigation */
   .logo {
     margin-right: 76px;
   }
-  .menu {
-    display: inline-flex;
-    gap: 40px;
-  }
+  /* Navigation */
+
   .list-item-title {
     font-size: 20px;
     text-align: left;
@@ -1013,13 +1071,17 @@ label {
   }
   .list-item-p {
     font-weight: 400;
-    font-size: 16px;
   }
+
+  /* Hero Section */
   .hero-section {
     max-width: 1440px;
     padding-top: 188px;
     padding-bottom: 188px;
   }
+  /* /Hero Section */
+
+  /* Our approach Section */
   .our-approach-section {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -1035,9 +1097,13 @@ label {
   .our-approach-item {
     flex-basis: 264px;
   }
+  /* /Our approach Section */
+
   .what-we-do {
     display: block;
   }
+
+  /* Our Team section */
   .our-team-section {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -1049,6 +1115,9 @@ label {
   .our-team-item-title {
     text-align: center;
   }
+  /* Our Team section */
+
+  /* Our customers Section */
   .our-customers-section {
     padding: 120px 0;
   }
@@ -1058,6 +1127,9 @@ label {
   .customers-item {
     flex-basis: calc((100% - 120px) / 6);
   }
+  /* /Our customers Section */
+
+  /* Page Footer */
   .page-footer-container {
     flex-direction: row;
     gap: 0;
@@ -1074,5 +1146,6 @@ label {
   .subscribe-and-socials-title {
     text-align: left;
   }
+  /* /Page Footer */
 }
 /* /Desctop */
