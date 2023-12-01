@@ -1,5 +1,4 @@
 /* Common Styles */
-
 :root {
   --primary-text-color: #434455;
   --title-text-color: #2e2f42;
@@ -85,11 +84,9 @@ label {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-
 /* /Common Styles */
 
 /* Page Header */
-
 .page-header {
   border-bottom: 1px solid var(--border-color);
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
@@ -104,7 +101,6 @@ label {
 }
 
 /* Navigation */
-
 .page-nav {
   display: flex;
   align-items: center;
@@ -121,11 +117,9 @@ label {
   display: none;
   gap: 40px;
 }
-
 /* /Navigation */
 
 /* Address */
-
 .address {
   display: none;
 }
@@ -142,13 +136,11 @@ label {
   color: var(--primary-text-color);
   transition: color var(--default-transition-properties);
 }
-
 /* /Address */
 
 /* /Page Header */
 
 /* Main */
-
 .section-title {
   color: var(--title-text-color);
   font-size: 36px;
@@ -191,7 +183,6 @@ label {
 }
 
 /* Hero Section */
-
 .hero-section {
   margin: 0 auto;
   max-width: 1440px;
@@ -232,17 +223,17 @@ label {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   transition: background-color var(--default-transition-properties);
 }
-
 /* /Hero Section */
 
 /* Our Approach Section */
-
 .our-approach-list {
   display: flex;
 }
 .our-approach-title {
-  text-align: left;
-  font-weight: 700;
+  color: var(--title-text-color);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 .our-approach-svg-container {
   display: none;
@@ -254,11 +245,9 @@ label {
   margin-bottom: 8px;
   border-radius: 4px;
 }
-
 /* /Our Approach Section */
 
 /* What We Do Section */
-
 .what-we-do {
   display: none;
 
@@ -276,11 +265,9 @@ label {
 .what-we-do-li {
   flex-basis: calc((100% - 48px) / 3);
 }
-
 /* /What We Do Section */
 
 /* Our Team Section */
-
 .our-team-section {
   background-color: var(--secondary-bg-color);
 }
@@ -333,11 +320,9 @@ label {
 .socials-icon {
   fill: var(--secondary-bg-color);
 }
-
 /* /Our Team Section */
 
 /* Our Customers Section */
-
 .customers-list {
   display: flex;
   flex-wrap: wrap;
@@ -367,13 +352,11 @@ label {
 .customers-svg {
   fill: currentColor;
 }
-
 /* /Our Customers Section */
 
 /* /Main */
 
 /* Page Footer */
-
 .page-footer {
   background-color: var(--title-text-color);
   padding-top: 100px;
@@ -442,11 +425,9 @@ label {
   fill: var(--primary-bg-color);
   transition: background-color var(--default-transition-properties);
 }
-
 /* /Page Footer */
 
 /* Modal Window */
-
 .back-drop {
   position: fixed;
   top: 0;
@@ -633,20 +614,17 @@ label {
   transition: color var(--default-transition-properties);
   transition: background-color var(--default-transition-properties);
 }
-
 /* /Modal Window */
 
 /* Portfolio */
 
 /* Our Services Section */
-
 .our-services {
   padding-top: 96px;
   padding-bottom: 120px;
 }
 
 /* sort buttons */
-
 .sort-buttons-list {
   display: flex;
   justify-content: center;
@@ -671,7 +649,6 @@ label {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
-
 /* /sort buttons */
 
 /* Our services list */
@@ -723,19 +700,19 @@ label {
   border: 1px solid var(--border-color);
   border-top: 0;
 }
-
 /* /Our services list */
 
 /* /Our Services Section */
 
 /* /Portfolio */
 
+/* Phone */
 @media screen and (max-width: 767px) {
   .container {
     max-width: 428px;
   }
-  /* Mobile Menu */
 
+  /* Mobile Menu */
   .open-mobile-menu-but {
     display: block;
     width: 32px;
@@ -838,7 +815,6 @@ label {
   .mobile-socials-link {
     fill: var(--secondary-bg-color);
   }
-
   /* /Mobile Menu */
 
   .our-approach-section {
@@ -847,6 +823,7 @@ label {
   }
   .our-approach-title {
     text-align: center;
+    font-weight: 700;
   }
   .our-approach-list {
     flex-direction: column;
@@ -889,7 +866,9 @@ label {
     width: 100%;
   }
 }
+/* /Phone */
 
+/* Tablet */
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -947,6 +926,10 @@ label {
     max-width: 496px;
     font-size: 56px;
   }
+  .our-approach-title {
+    text-align: left;
+    font-weight: 500;
+  }
   .subscribe-form {
     flex-direction: row;
     gap: 24px;
@@ -955,7 +938,9 @@ label {
     width: 264px;
   }
 }
+/* /Tablet */
 
+/* Tablet-Desctop */
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .page-nav {
     gap: 120px;
@@ -1007,7 +992,9 @@ label {
     align-items: baseline;
   }
 }
+/* /Tablet-Desctop */
 
+/* Desctop */
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
@@ -1088,3 +1075,4 @@ label {
     text-align: left;
   }
 }
+/* /Desctop */
