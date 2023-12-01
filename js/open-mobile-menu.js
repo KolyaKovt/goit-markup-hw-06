@@ -2,7 +2,7 @@
   const refs = {
     openMenuBtn: document.querySelector("[mobile-menu-open]"),
     closeMenuBtn: document.querySelector("[mobile-menu-close]"),
-    menu: document.querySelector("[mobile-menu]"),
+    menu: document.querySelector("[mobile-menu-container]"),
   };
 
   refs.openMenuBtn.addEventListener("click", toggleModal);
