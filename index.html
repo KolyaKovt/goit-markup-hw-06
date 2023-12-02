@@ -21,7 +21,7 @@
     <!-- Script to open the Modal Window -->
     <script src="./js/modal.js" defer></script>
     <!-- Script to open the mobile-menu -->
-    <script src="./js/open-mobile-menu.js" defer></script>
+    <script src="./js/mobile-menu.js" defer></script>
     <title>Web Studio</title>
   </head>
 
@@ -151,25 +151,49 @@
           <h2 class="section-title">What are we doing</h2>
           <ul class="list what-we-do-list">
             <li class="what-we-do-li">
-              <img
-                src="./images/computer.jpg"
-                alt="computer image"
-                width="360"
-              />
+              <picture>
+                <source
+                  srcset="./images/computer.jpg 1x, ./images/computer@2.jpg 2x"
+                  media="(min-width: 1158px)"
+                />
+                <img
+                  src="./images/computer.jpg"
+                  alt="computer image"
+                  width="360"
+                />
+              </picture>
             </li>
             <li class="what-we-do-li">
-              <img
-                src="./images/telephones.jpg"
-                alt="telephones image"
-                width="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/telephones.jpg   1x,
+                    ./images/telephones@2.jpg 2x
+                  "
+                  media="(min-width: 1158px)"
+                />
+                <img
+                  src="./images/telephones.jpg"
+                  alt="telephones image"
+                  width="360"
+                />
+              </picture>
             </li>
             <li class="what-we-do-li">
-              <img
-                src="./images/telephone.jpg"
-                alt="telephone image"
-                width="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/telephone.jpg   1x,
+                    ./images/telephone@2.jpg 2x
+                  "
+                  media="(min-width: 1158px)"
+                />
+                <img
+                  src="./images/telephone.jpg"
+                  alt="telephone image"
+                  width="360"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -344,7 +368,7 @@
 
       <!-- Our Customers Section -->
       <section class="our-customers-section">
-        <div class="container">
+        <div class="container our-customers-container">
           <h2 class="section-title">Customers</h2>
           <ul class="list customers-list">
             <li class="customers-item">
@@ -479,7 +503,9 @@
               <a class="link mobile-nav-link current" href="">Studio</a>
             </li>
             <li class="mobile-nav-item">
-              <a class="link mobile-nav-link" href="">Portfolio</a>
+              <a class="link mobile-nav-link" href="./portfolio.html"
+                >Portfolio</a
+              >
             </li>
             <li class="mobile-nav-item">
               <a class="link mobile-nav-link" href="">Contacts</a>
