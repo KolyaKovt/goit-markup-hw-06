@@ -896,7 +896,7 @@ label {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/hero-bg-mobile@2.jpg);
+        url(../images/hero-bg-mobile@2x.jpg);
     }
   }
 }
@@ -1104,7 +1104,7 @@ label {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/hero-bg-tablet@2.jpg);
+        url(../images/hero-bg-tablet@2x.jpg);
     }
   }
 }
@@ -1228,7 +1228,7 @@ label {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/hero-bg-desktop@2.jpg);
+        url(../images/hero-bg-desktop@2x.jpg);
     }
   }
 }
