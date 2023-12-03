@@ -199,6 +199,8 @@ label {
   display: flex;
 }
 .our-approach-title {
+  font-size: 36px;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
@@ -826,8 +828,6 @@ label {
   /* our approach section */
   .our-approach-title {
     text-align: center;
-    font-weight: 700;
-    font-size: 36px;
   }
   .our-approach-list {
     flex-direction: column;
@@ -992,7 +992,6 @@ label {
   /* Our Approach Section */
   .our-approach-title {
     text-align: left;
-    font-weight: 500;
   }
   /* /Our Approach Section */
 
@@ -1164,6 +1163,10 @@ label {
   }
   .our-approach-item {
     flex-basis: 264px;
+  }
+  .our-approach-title {
+    font-size: 20px;
+    font-weight: 500;
   }
   /* /Our approach Section */
 
