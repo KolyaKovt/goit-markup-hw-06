@@ -914,10 +914,6 @@ label {
     align-items: center;
   }
   .nav-list {
-    display: none;
-    gap: 40px;
-  }
-  .nav-list {
     display: inline-flex;
     gap: 40px;
   }
@@ -1031,6 +1027,7 @@ label {
   }
   .address-link {
     padding: 0;
+    font-size: 12px;
   }
   /* Address */
 
@@ -1117,8 +1114,8 @@ label {
   }
 
   /* Navigation */
-  .logo {
-    margin-right: 76px;
+  .page-nav {
+    gap: 76px;
   }
   /* Navigation */
 
