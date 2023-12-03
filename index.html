@@ -62,7 +62,11 @@
         </address>
         <!-- /Desctop Menu -->
         <!-- Open Mobile Menu -->
-        <button class="open-mobile-menu-but" type="button" mobile-menu-open>
+        <button
+          class="open-mobile-menu-but"
+          type="button"
+          id="mobile-menu-open"
+        >
           <svg class="open-mobile-menu-svg" width="24" height="24">
             <use href="./images/icons.svg#icon-open-mobile-menu"></use>
           </svg>
@@ -489,9 +493,13 @@
     <!-- /Page Footer -->
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu-container is-hidden" mobile-menu-container>
+    <div class="mobile-menu-container is-hidden" id="mobile-menu-container">
       <div class="mobile-menu">
-        <button type="button" class="close-mobile-menu-btn" mobile-menu-close>
+        <button
+          type="button"
+          class="close-mobile-menu-btn"
+          id="mobile-menu-close"
+        >
           <svg class="close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
