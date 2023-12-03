@@ -91,11 +91,20 @@
             <li class="our-services-item">
               <a href="" class="link our-services-link">
                 <div class="service-photo-description-cont">
-                  <img
-                    src="./images/bank-app.jpg"
-                    alt="bank app image"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/bank-app.jpg    1x,
+                        ./images/bank-app@2x.jpg 2x
+                      "
+                      media="(min-width: 200px)"
+                    />
+                    <img
+                      src="./images/bank-app.jpg"
+                      alt="bank app image"
+                      width="360"
+                    />
+                  </picture>
                   <p class="service-description-p">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
